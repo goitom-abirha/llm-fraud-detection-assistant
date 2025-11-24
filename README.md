@@ -170,23 +170,22 @@ Works together with the rules engine
 Provides consistent and predictable results
 
 This completes the first full version of the ML pipeline, making the project functional end-to-end.
-```
-  screenshot
-##  Model Output Examples updated
+
+## Model Output Examples (Updated)
 
 These screenshots show how the fraud rules + ML model respond to different types of transactions.
 
 ---
 
-###  Very Small Amount — Rule Triggered
-![Very Small Amount](docs/screenshot_very_small_amount.png)
+### ✅ Very Small Amount — Rule Triggered
+![Very Small Amount](docs/screenshot_VerySmallAmount.PNG)
 
 ---
 
-### High Amount + Pattern Rules Triggered
-![High Amount](docs/screenshot_high_amount.png)
+### ⚠️ High Amount + Pattern Rules Triggered
+![High Amount](docs/screeshot_HighAmount.PNG)
 
 ---
 
-###  Normal Transaction — No Rules Triggered
-![No Rules](docs/screenshot_no_rules.png)
+### ✅ Normal Transaction — No Rules Triggered
+![No Rules](docs/screenshot_None.PNG)

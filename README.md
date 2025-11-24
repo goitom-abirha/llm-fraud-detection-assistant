@@ -153,7 +153,6 @@ Score is combined with the rules engine output for interpretation
 
 This completes the first end-to-end version of the fraud detection pipeline.
 
-```
 UI Screenshots
 
 Home Page Screenshot

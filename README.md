@@ -87,6 +87,7 @@ llm-fraud-detection-assistant/
 ├── .gitignore
 ├── requirements.txt
 ├── README.md
+```
 Progress Update — November 23, 2025
 
 Initial working version of the LLM Fraud Detection Assistant.

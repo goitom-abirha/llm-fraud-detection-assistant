@@ -105,6 +105,7 @@ This is the initial working version of the LLM Fraud Detection Assistant.
 - Added LLM explanation module with fallback  
 - Created static CSS + template structure  
 - Verified app runs successfully at http://127.0.0.1:5000
+
 ## Screenshots
 
 ### 🏠 Home Page

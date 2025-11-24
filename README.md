@@ -178,14 +178,14 @@ These screenshots show how the fraud rules + ML model respond to different types
 ---
 
 ### ✅ Very Small Amount — Rule Triggered
-![Very Small Amount](docs/screenshot_VerySmallAmount.PNG)
+![Very Small Amount](docs/screenshot_VerySmallAmount.png)
 
 ---
 
 ### ⚠️ High Amount + Pattern Rules Triggered
-![High Amount](docs/screeshot_HighAmount.PNG)
+![High Amount](docs/screeshot_HighAmount.png)
 
 ---
 
 ### ✅ Normal Transaction — No Rules Triggered
-![No Rules](docs/screenshot_None.PNG)
+![No Rules](docs/screenshot_None.png)

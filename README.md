@@ -152,7 +152,7 @@ Each transaction returns a fraud probability score (0–1)
 Score is combined with the rules engine output for interpretation
 
 This completes the first end-to-end version of the fraud detection pipeline.
-
+```
 UI Screenshots
 
 Home Page Screenshot
@@ -162,7 +162,6 @@ Fraud Result Screenshot
 ![Fraud Result](docs/screenshot_result.png)
 The screeshot with home page and results.
 
-```
 Model Output Examples (Updated)
 
 These screenshots show how the fraud rules + ML model respond to different transaction types.

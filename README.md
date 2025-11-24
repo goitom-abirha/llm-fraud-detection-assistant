@@ -1,46 +1,53 @@
 # LLM Fraud Detection Assistant
 
-A hybrid fraud detection system that combines **machine learning models**, **engineered fraud rules**, and a **Large Language Model (LLM)** to detect and explain suspicious financial transactions. Built using the **IEEE-CIS Fraud Detection Dataset**, this project simulates how real banks such as Capital One, Chase, Wells Fargo, and AmEx detect and investigate fraud.
+A hybrid fraud detection system that combines **machine learning models**, **engineered fraud rules**, and a **Large Language Model (LLM)** to detect and explain suspicious financial transactions. Inspired by real-world banking systems used by Capital One, Chase, Wells Fargo, and AmEx.
 
 ---
 
 ## Project Overview
 
-Financial fraud is increasing in complexity due to device spoofing, account takeovers, identity theft, rapid-fire transactions, and cross-border payment risks. Traditional fraud scoring models lack transparency, and rule-based systems alone are not sufficient.
+Financial fraud is becoming more sophisticated due to account takeovers, device spoofing, identity theft, velocity attacks, and cross-border risks. Traditional ML models often lack transparency, while rules alone are too limited.
 
-This project implements an **LLM-powered Fraud Detection Assistant** capable of:
+This project provides an **LLM-powered Fraud Detection Assistant** that can:
 
-- Scoring transactions using trained ML models  
-- Identifying fraud signals using bank-style rule checks  
-- Generating natural-language explanations using an LLM  
-- Providing analysts with a simple case review dashboard  
+- Score transactions using trained ML models  
+- Detect fraud patterns using bank-style rule checks  
+- Generate human-like explanations with an LLM  
+- Provide a simple analyst review dashboard  
 
-This creates an **interpretable, explainable, and industry-aligned fraud detection workflow**.
+The goal is to create an **interpretable, transparent, and industry-aligned fraud detection workflow**.
 
 ---
 
 ## Key Features
 
-- **Hybrid Risk Engine:** ML model + rules + LLM reasoning  
-- **Analyst Dashboard:** Search, explain, and review suspicious transactions  
+- **Hybrid Risk Engine:** ML model + rule engine + LLM reasoning  
+- **Analyst Dashboard:** Enter transactions and view fraud insights  
 - **Machine Learning:** Logistic Regression, Random Forest, LightGBM  
-- **Bank-Style Fraud Rules:**  
-  - New device / new IP  
-  - Velocity checks  
-  - Abnormal spending  
-  - Browser/device mismatch  
-  - Time-of-day anomalies  
-- **Explainable AI:** Generates clear explanations of why a transaction is risky  
-- **Realistic Dataset:** IEEE-CIS Fraud Detection (1M+ transactions)
+- **Fraud Rules Implemented:**  
+  - High amount  
+  - Very small amount  
+  - Suspicious ranges  
+  - Threshold-avoidance behavior  
+  - Repeated digit patterns  
+  - Rounded amounts  
+- **Explainable AI:** Natural-language explanations for analysts  
+- **Dataset:** IEEE-CIS Fraud Detection (1M+ transactions)
 
 ---
 
 ## Dataset: IEEE-CIS Fraud Detection
 
-This project uses the public **IEEE-CIS Fraud Detection Dataset**.
+The project uses the public Kaggle dataset:
 
-> ⚠️ *Raw datasets are NOT uploaded to GitHub due to size and Kaggle license restrictions.*  
-> Download from Kaggle and place inside `data/raw/`.
+- `train_transaction.csv` — transaction-level data  
+- `train_identity.csv` — device & browser metadata  
+- `test_transaction.csv` — test set  
+- `test_identity.csv` — identity metadata  
+
+> ⚠️ Dataset files are NOT included in this repo due to size and licensing.  
+Download them from Kaggle and place them in:
+
 
 ---
 
@@ -50,35 +57,61 @@ This project uses the public **IEEE-CIS Fraud Detection Dataset**.
 llm-fraud-detection-assistant/
 │
 ├── data/
-│   ├── raw/                # Raw IEEE-CIS dataset (NOT uploaded)
+│   ├── raw/                # Raw Kaggle data (not uploaded)
 │   ├── processed/          # Cleaned & merged datasets
 │
 ├── notebooks/
-│   ├── 01_eda.ipynb                # Exploratory Data Analysis
+│   ├── 01_eda.ipynb
 │   ├── 02_feature_engineering.ipynb
 │   ├── 03_model_training.ipynb
 │
 ├── app/
 │   ├── __init__.py
-│   ├── main.py                    # Flask/Streamlit main app
-│   ├── rules_engine.py            # Bank-style fraud rules
-│   ├── llm_explainer.py           # OpenAI LLM prompts + reasoning
-│   ├── models.py                  # ML model loading + scoring
+│   ├── main.py             # Flask app entry point
+│   ├── rules_engine.py     # Bank-style fraud rules
+│   ├── llm_explainer.py    # LLM prompts + explanations
+│   ├── models.py           # ML model loading + scoring
 │
 ├── models/
-│   ├── fraud_model.pkl            # Trained ML model
+│   ├── fraud_model.pkl     # Trained ML model
 │   ├── scaler.pkl
 │
 ├── scripts/
-│   ├── prepare_data.py            # Data cleaning + merging
+│   ├── prepare_data.py
 │   ├── train_model.py
 │
 ├── docs/
-│   ├── proposal.pdf
-│   ├── architecture_diagram.png
 │   ├── screenshot_homepage.png
 │   ├── screenshot_result.png
 │
 ├── .gitignore
 ├── requirements.txt
 ├── README.md
+Progress Update — November 23, 2025
+
+Initial working version of the LLM Fraud Detection Assistant.
+
+Completed Today
+
+Project folder structure created
+
+Added Flask backend (app/main.py)
+
+Implemented UI with Bootstrap
+
+Added fraud rules (HighAmount, VerySmallAmount, etc.)
+
+Built placeholder ML fraud scoring logic
+
+Added LLM reasoning module (fallback explanation)
+
+Added CSS + HTML template structure
+
+App tested successfully at:
+http://127.0.0.1:5000
+
+Home Page Screenshot
+![Home Page](docs/screenshot_homepage.png)
+
+Fraud Result Screenshot
+![Fraud Result](docs/screenshot_result.png)

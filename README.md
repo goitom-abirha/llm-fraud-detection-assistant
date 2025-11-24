@@ -45,7 +45,7 @@ The project uses the public Kaggle dataset:
 - `test_transaction.csv` — test set  
 - `test_identity.csv` — identity metadata  
 
-> ⚠️ Dataset files are NOT included in this repo due to size and licensing.  
+> ⚠️ Dataset files are **NOT** included in this repo due to size and licensing.  
 > Download them from Kaggle and place them in `data/raw/`.
 
 ---
@@ -82,17 +82,15 @@ llm-fraud-detection-assistant/
 ├── docs/
 │   ├── screenshot_homepage.png
 │   ├── screenshot_result.png
-│   ├── screenshot_VerySmallAmount.PNG
-│   ├── screenshot_None.PNG
-│   ├── screeshot_HighAmount.PNG
+│   ├── screenshot_VerySmallAmount.png
+│   ├── screenshot_HighAmount.png
+│   ├── screenshot_None.png
 │
 ├── .gitignore
 ├── requirements.txt
 ├── README.md
-
----
-
-Progress Update — November 23, 2025
+```
+Progress Update — November 23–24, 2025
 
 Initial working version of the LLM Fraud Detection Assistant.
 
@@ -100,23 +98,63 @@ Completed:
 
 Project folder structure created
 
-Added Flask backend (app/main.py)
+Flask backend added (app/main.py)
 
-Implemented UI with Bootstrap
+UI implemented with Bootstrap
 
-Added fraud rules (HighAmount, VerySmallAmount, etc.)
+Fraud rules added (HighAmount, VerySmallAmount, etc.)
 
-Built placeholder ML fraud scoring logic
+Placeholder ML scoring logic replaced with a trained model
 
-Added LLM reasoning module (fallback explanation)
+LLM reasoning module placeholder added (fallback explanation)
 
-Added CSS + HTML template structure
+CSS + HTML template structure created
 
 App tested successfully at: http://127.0.0.1:5000
 
----
+Model & Training (Added November 24, 2025)
 
-Screenshot
+Today, I implemented and trained the project’s first machine learning fraud model and connected it to the Flask app.
+
+Data Preparation
+
+Using the IEEE-CIS dataset:
+
+Loaded raw transaction + identity tables
+
+Merged and cleaned both tables
+
+Saved processed dataset to:
+
+data/processed/train_merged_clean.csv
+
+Model Training
+
+Trained a baseline Logistic Regression model:
+
+Scaled numerical features
+
+Used a simple train/validation split
+
+Achieved 96.5% validation accuracy
+
+Artifacts saved to:
+
+models/fraud_model.pkl
+models/scaler.pkl
+
+App Integration
+
+Model and scaler load automatically when the Flask app starts
+
+Each transaction returns a fraud probability score (0–1)
+
+Score is combined with the rules engine output for interpretation
+
+This completes the first end-to-end version of the fraud detection pipeline.
+
+```
+UI Screenshots
 
 Home Page Screenshot
 ![Home Page](docs/screenshot_homepage.png)
@@ -124,61 +162,32 @@ Home Page Screenshot
 Fraud Result Screenshot
 ![Fraud Result](docs/screenshot_result.png)
 
-Model & Training (Added November 24, 2025)
----
-Today, I implemented and trained the project’s first machine learning fraud model, connected it to the Flask app, and prepared the full ML pipeline.
 
-✔ Data Preparation
-
-Using the IEEE-CIS dataset, I:
-
-Loaded raw transaction + identity data
-
-Merged and cleaned both tables
-
-Saved the processed dataset to:
-data/processed/train_merged_clean.csv
-
-✔ Model Training
-
-Trained a baseline Logistic Regression model:
-
-Scaled numerical features
-
-Trained/validated using a simple split
-
-Achieved 96.5% validation accuracy
-
-Saved artifacts to:
-
-models/fraud_model.pkl
-
-models/scaler.pkl
-
-✔ App Integration
-
-The trained model is now integrated into the Flask app:
-
-Loads automatically at startup
-
-Generates a fraud probability score for each transaction
-
-Works together with the rules engine
-
-Provides consistent, reproducible results
-
-This completes the first full version of the ML pipeline, making the project functional end-to-end.
----
+```
 Model Output Examples (Updated)
 
-These screenshots show how the fraud rules + ML model respond to different types of transactions.
+These screenshots show how the fraud rules + ML model respond to different transaction types.
 
 ### Very Small Amount — Rule Triggered
 ![Very Small Amount](docs/screenshot_VerySmallAmount.png)
 
-### High Amount — Pattern Rules Triggered
-![High Amount](docs/screeshot_HighAmount.png)
+### High Amount + Pattern Rules Triggered
+![High Amount](docs/screenshot_HighAmount.png)
 
 ### Normal Transaction — No Rules Triggered
 ![No Rules](docs/screenshot_None.png)
----
+
+More features will be added in upcoming development stages (LLM explanations, more features, and advanced risk scoring).
+
+```
+
+### 2. Save, commit, push
+
+In PowerShell inside the project:
+
+```bash
+git add README.md
+git commit -m "Clean README and fix screenshot links"
+git push origin main
+
+```

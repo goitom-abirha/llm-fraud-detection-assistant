@@ -127,6 +127,25 @@ Fraud Result Screenshot
 ![Fraud Result](docs/screenshot_result.png)
 
 Model & Training (Added November 24, 2025)
+## Model Output Examples (Updated)
+
+These screenshots show how the fraud rules + ML model respond to different types of transactions.
+
+---
+
+### ✅ Very Small Amount — Rule Triggered
+![Very Small Amount](docs/screenshot_VerySmallAmount.png)
+
+---
+
+### ⚠️ High Amount + Pattern Rules Triggered
+![High Amount](docs/screeshot_HighAmount.png)
+
+---
+
+### ✅ Normal Transaction — No Rules Triggered
+![No Rules](docs/screenshot_None.png)
+
 
 Today, I implemented and trained the project’s first machine learning fraud model, connected it to the Flask app, and prepared the full ML pipeline.
 
@@ -171,21 +190,3 @@ Provides consistent and predictable results
 
 This completes the first full version of the ML pipeline, making the project functional end-to-end.
 
-## Model Output Examples (Updated)
-
-These screenshots show how the fraud rules + ML model respond to different types of transactions.
-
----
-
-### ✅ Very Small Amount — Rule Triggered
-![Very Small Amount](docs/screenshot_VerySmallAmount.png)
-
----
-
-### ⚠️ High Amount + Pattern Rules Triggered
-![High Amount](docs/screeshot_HighAmount.png)
-
----
-
-### ✅ Normal Transaction — No Rules Triggered
-![No Rules](docs/screenshot_None.png)

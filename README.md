@@ -106,13 +106,14 @@ This is the initial working version of the LLM Fraud Detection Assistant.
 - Created static CSS + template structure  
 - Verified app runs successfully at http://127.0.0.1:5000  
 
-###  Screenshots
+## Screenshots
 
-#### Home Page
-![Home Page](docs/screenshot_homepage.png)
+### Home Page
+![Home Page](./docs/screenshot_homepage.png)
 
-#### Fraud Analysis Result
-![Fraud Result](docs/screenshot_result.png)
+### Fraud Result
+![Fraud Result](./docs/screenshot_result.png)
+
 
 More features will be added in upcoming development stages.
 

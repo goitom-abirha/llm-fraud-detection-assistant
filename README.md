@@ -4,7 +4,7 @@ A hybrid fraud detection system that combines **machine learning models**, **eng
 
 ---
 
-##  Project Overview
+## Project Overview
 
 Financial fraud is increasing in complexity due to device spoofing, account takeovers, identity theft, rapid-fire transactions, and cross-border payment risks. Traditional fraud scoring models lack transparency, and rule-based systems alone are not sufficient.
 
@@ -19,41 +19,32 @@ This creates an **interpretable, explainable, and industry-aligned fraud detecti
 
 ---
 
-##  Key Features
+## Key Features
 
--  **Hybrid Risk Engine:** ML model + rules + LLM reasoning  
--  **Analyst Dashboard:** Search, explain, and review suspicious transactions  
--  **Machine Learning:** Logistic Regression, Random Forest, LightGBM  
--  **Bank-Style Fraud Rules:**  
+- **Hybrid Risk Engine:** ML model + rules + LLM reasoning  
+- **Analyst Dashboard:** Search, explain, and review suspicious transactions  
+- **Machine Learning:** Logistic Regression, Random Forest, LightGBM  
+- **Bank-Style Fraud Rules:**  
   - New device / new IP  
   - Velocity checks  
   - Abnormal spending  
   - Browser/device mismatch  
   - Time-of-day anomalies  
--  **Explainable AI:** Generates clear explanations of why a transaction is risky  
--  **Realistic Dataset:** IEEE-CIS Fraud Detection (1M+ transactions)
+- **Explainable AI:** Generates clear explanations of why a transaction is risky  
+- **Realistic Dataset:** IEEE-CIS Fraud Detection (1M+ transactions)
 
 ---
 
-##  Dataset: IEEE-CIS Fraud Detection
+## Dataset: IEEE-CIS Fraud Detection
 
-This project uses the public **IEEE-CIS Fraud Detection Dataset**:
+This project uses the public **IEEE-CIS Fraud Detection Dataset**.
 
-- `train_transaction.csv` — main transaction data (with `isFraud`)  
-- `train_identity.csv` — device/browser/IP identity metadata  
-- `test_transaction.csv` — unlabeled transactions  
-- `test_identity.csv` — identity metadata for test transactions  
-- `sample_submission.csv` — Kaggle reference submission  
-
- *Due to size and licensing, raw dataset files are NOT uploaded to GitHub.*  
-Download from Kaggle and place them inside:
-
+> ⚠️ *Raw datasets are NOT uploaded to GitHub due to size and Kaggle license restrictions.*  
+> Download from Kaggle and place inside `data/raw/`.
 
 ---
 
-##  Project Structure
-
-The project follows a clean ML + LLM architecture.
+## Project Structure
 
 ```text
 llm-fraud-detection-assistant/
@@ -85,35 +76,9 @@ llm-fraud-detection-assistant/
 ├── docs/
 │   ├── proposal.pdf
 │   ├── architecture_diagram.png
+│   ├── screenshot_homepage.png
+│   ├── screenshot_result.png
 │
 ├── .gitignore
 ├── requirements.txt
 ├── README.md
-
----
-
-##  Progress Update — November 23, 2025
-
-This is the initial working version of the LLM Fraud Detection Assistant.
-
-###  Completed Today
-- Set up full project folder structure  
-- Added Flask app (`app/main.py`)  
-- Added UI with Bootstrap  
-- Implemented fraud rules (`HighAmount`, `VerySmallAmount`)  
-- Added placeholder fraud scoring logic  
-- Added LLM explanation module with fallback  
-- Created static CSS + template structure  
-- Verified app runs successfully at http://127.0.0.1:5000
-
-## Screenshots
-
-### 🏠 Home Page
-![Home Page](docs/screenshot_homepage.png)
-
-### 📊 Fraud Result Page
-![Fraud Result](docs/screenshot_result.png)
-
-
-More features will be added in upcoming development stages.
-

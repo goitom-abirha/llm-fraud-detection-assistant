@@ -161,7 +161,7 @@ Home Page Screenshot
 Fraud Result Screenshot
 ![Fraud Result](docs/screenshot_result.png)
 The screeshot with home page and results.
-
+```
 Model Output Examples (Updated)
 
 These screenshots show how the fraud rules + ML model respond to different transaction types.

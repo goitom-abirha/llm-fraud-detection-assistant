@@ -170,7 +170,7 @@ Works together with the rules engine
 Provides consistent and predictable results
 
 This completes the first full version of the ML pipeline, making the project functional end-to-end.
-
+```
   screenshot
 ##  Model Output Examples updated
 

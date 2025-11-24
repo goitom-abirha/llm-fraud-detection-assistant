@@ -109,10 +109,11 @@ This is the initial working version of the LLM Fraud Detection Assistant.
 ## Screenshots
 
 ### Home Page
-![Home Page](./docs/screenshot_homepage.png?raw=true)
+![Home Page](docs/screenshot_homepage.png)
 
 ### Fraud Analysis Result
-![Fraud Result](./docs/screenshot_result.png?raw=true)
+![Fraud Result](docs/screenshot_result.png)
+
 
 
 More features will be added in upcoming development stages.

@@ -89,3 +89,30 @@ llm-fraud-detection-assistant/
 ├── .gitignore
 ├── requirements.txt
 ├── README.md
+
+---
+
+##  Progress Update — November 23, 2025
+
+This is the initial working version of the LLM Fraud Detection Assistant.
+
+###  Completed Today
+- Set up full project folder structure  
+- Added Flask app (`app/main.py`)  
+- Added UI with Bootstrap  
+- Implemented fraud rules (`HighAmount`, `VerySmallAmount`)  
+- Added placeholder fraud scoring logic  
+- Added LLM explanation module with fallback  
+- Created static CSS + template structure  
+- Verified app runs successfully at http://127.0.0.1:5000  
+
+###  Screenshots
+
+#### Home Page
+![Home Page](docs/screenshot_homepage.png)
+
+#### Fraud Analysis Result
+![Fraud Result](docs/screenshot_result.png)
+
+More features will be added in upcoming development stages.
+

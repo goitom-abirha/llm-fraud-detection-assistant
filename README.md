@@ -89,6 +89,7 @@ llm-fraud-detection-assistant/
 ├── .gitignore
 ├── requirements.txt
 ├── README.md
+
 ---
 
 Progress Update — November 23, 2025
@@ -113,7 +114,7 @@ Added CSS + HTML template structure
 
 App tested successfully at: http://127.0.0.1:5000
 
-Screenshots
+---
 
 Screenshot
 
@@ -124,7 +125,7 @@ Fraud Result Screenshot
 ![Fraud Result](docs/screenshot_result.png)
 
 Model & Training (Added November 24, 2025)
-
+---
 Today, I implemented and trained the project’s first machine learning fraud model, connected it to the Flask app, and prepared the full ML pipeline.
 
 ✔ Data Preparation
@@ -167,7 +168,7 @@ Works together with the rules engine
 Provides consistent, reproducible results
 
 This completes the first full version of the ML pipeline, making the project functional end-to-end.
-
+---
 Model Output Examples (Updated)
 
 These screenshots show how the fraud rules + ML model respond to different types of transactions.
@@ -180,3 +181,4 @@ These screenshots show how the fraud rules + ML model respond to different types
 
 ### Normal Transaction — No Rules Triggered
 ![No Rules](docs/screenshot_None.png)
+---

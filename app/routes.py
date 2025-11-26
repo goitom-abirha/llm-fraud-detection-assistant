@@ -1,3 +1,4 @@
+from .llm_explainer import generate_explanation
 from flask import Blueprint, render_template_string, request
 from .models import load_model, score_transaction
 from .rules_engine import apply_rules
@@ -80,13 +81,17 @@ def index():
         else:
             fraud_score_display = f"{fraud_score:.4f}"
 
-        # 4) Simple explanation (no OpenAI yet)
-        if "HighAmount" in rules:
-            explanation = "High transaction amount — could be risky. Review customer history."
-        elif "VerySmallAmount" in rules:
-            explanation = "Very small transaction — usually low risk."
+               # 4) LLM-based explanation (with fallback if no API key)
+        if fraud_score is None:
+            numeric_score = min(amount / 10000, 1.0)
         else:
-            explanation = "No specific rules triggered. Looks like a normal transaction."
+            numeric_score = fraud_score
+
+        explanation = generate_explanation(
+            amount=amount,
+            rules=rules,
+            fraud_score=numeric_score,
+        )
 
         result = {
             "fraud_score": fraud_score_display,

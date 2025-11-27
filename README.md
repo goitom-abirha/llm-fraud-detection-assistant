@@ -226,7 +226,6 @@ New file created:
 
 app/llm_explainer.py
 
-
 Provides rule-aware explanations like:
 
 “High transaction amount — could be risky. Review customer history.”
@@ -240,6 +239,7 @@ Removed incorrect app/app/ folder
 Fixed import error (ModuleNotFoundError: app.llm_explainer)
 
 Rebuilt proper structure
+
 ```
 Model Output Examples (Updated)
 

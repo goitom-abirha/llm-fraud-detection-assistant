@@ -2,7 +2,7 @@
 
 A hybrid fraud detection system that combines **machine learning models**, **engineered fraud rules**, and a **Large Language Model (LLM)** to detect and explain suspicious financial transactions. Inspired by real-world banking systems used by Capital One, Chase, Wells Fargo, and AmEx.
 
----
+```
 
 ## Project Overview
 
@@ -17,7 +17,7 @@ This project provides an **LLM-powered Fraud Detection Assistant** that can:
 
 The goal is to create an **interpretable, transparent, and industry-aligned fraud detection workflow**.
 
----
+```
 
 ## Key Features
 
@@ -34,7 +34,7 @@ The goal is to create an **interpretable, transparent, and industry-aligned frau
 - **Explainable AI:** Natural-language explanations for analysts  
 - **Dataset:** IEEE-CIS Fraud Detection (1M+ transactions)
 
----
+```
 
 ## Dataset: IEEE-CIS Fraud Detection
 

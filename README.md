@@ -5,7 +5,7 @@ Inspired by real-world fraud workflows used at Capital One, Chase, Wells Fargo, 
 
 ---
 
-## 🚀 Project Overview
+##  Project Overview
 
 Financial fraud is becoming more sophisticated due to:
 
@@ -28,7 +28,7 @@ The goal is an **interpretable, transparent, industry-aligned fraud detection wo
 
 ---
 
-## 🔍 Key Features
+##  Key Features
 
 - **Hybrid Risk Engine** → ML model + rule engine + LLM reasoning  
 - **Analyst Dashboard** → Flask web interface for live scoring  
@@ -58,12 +58,12 @@ This project uses the public Kaggle dataset:
 - `test_transaction.csv` — test transactions  
 - `test_identity.csv` — test identity metadata  
 
-> ⚠️ Dataset files are **NOT** included in this repo.  
+> Dataset files are **NOT** included in this repo.  
 > Download from Kaggle and place into:
 ---
 
 
-## 📁 Project Structure
+##  Project Structure
 
 ```text
 llm-fraud-detection-assistant/

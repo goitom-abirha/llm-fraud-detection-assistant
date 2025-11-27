@@ -189,3 +189,67 @@ git commit -m "Clean README and fix screenshot links"
 git push origin main
 
 ```
+
+Progress Update — November 26, 2025
+✔ Completed Today
+1. Added full ML training pipeline
+
+Cleaned & merged IEEE-CIS datasets
+
+Saved processed data to:
+
+data/processed/train_merged_clean.csv
+
+
+Trained Logistic Regression baseline model
+
+Achieved 96.5% validation accuracy
+
+Exported model & scaler to:
+
+models/fraud_model.pkl
+models/scaler.pkl
+
+2. Connected model to Flask app
+
+Model loads automatically when app starts
+
+Fraud score displayed with 4-decimal precision
+
+Perfect fallback behavior when model is missing
+
+Fully integrated with rules engine
+
+3. Implemented fallback LLM explanation
+
+New file created:
+
+app/llm_explainer.py
+
+
+Provides rule-aware explanations like:
+
+“High transaction amount — could be risky. Review customer history.”
+
+“Very small transaction — usually low risk.”
+
+4. Cleaned app/ folder
+
+Removed incorrect app/app/ folder
+
+Fixed import error (ModuleNotFoundError: app.llm_explainer)
+
+Rebuilt proper structure
+```
+Model Output Examples (Updated)
+
+Very Small Amount — Rule Triggered
+![Very Small Amount](docs/screenshot_VerySmallAmount_Explainer.png)
+
+ High Amount + Pattern Rules Triggered
+![High Amount](docs/screenshot_HignAmount_Explainer.png)
+
+ Normal Transaction — No Rules Triggered
+![No Rules](docs/screenshot_None_Explainer.png)
+
+```
